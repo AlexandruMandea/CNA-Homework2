@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Grpc.Core;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using ZodiacService.Protos;
 
 namespace ZodiacService.Services
 {
-    public class WinterZodiacSignsService : ZodiacSignTeller.ZodiacSignTellerBase
+    public class WinterZodiacSignsService : ZodiacSignTellerWinter.ZodiacSignTellerWinterBase
     {
         private readonly ILogger<WinterZodiacSignsService> _logger;
         public WinterZodiacSignsService(ILogger<WinterZodiacSignsService> logger)
@@ -15,9 +16,9 @@ namespace ZodiacService.Services
             _logger = logger;
         }
 
-        /*public override Task<ZodiacSign> SayZodiacSign(DateRequest request, ServerCallContext context)
+        /*public override Task<ZodiacSignWinter> SayZodiacSignWinter(DateRequestWinter request, ServerCallContext context)
         {
-            return Task.FromResult(new ZodiacSign
+            return Task.FromResult(new ZodiacSignWinter
             {
 
             });

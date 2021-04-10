@@ -1,0 +1,2 @@
+obj\Debug\netcoreapp3.1\Protos/ZodiacSummer.cs \
+obj\Debug\netcoreapp3.1\Protos/ZodiacSummerGrpc.cs: Protos/zodiac_summer.proto

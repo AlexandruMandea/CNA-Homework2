@@ -7,7 +7,7 @@ using ZodiacService.Protos;
 
 namespace ZodiacService.Services
 {
-    public class SpringZodiacSignsService : ZodiacSignTeller.ZodiacSignTellerBase
+    public class SpringZodiacSignsService : ZodiacSignTellerSpring.ZodiacSignTellerSpringBase
     {
         private readonly ILogger<SpringZodiacSignsService> _logger;
         public SpringZodiacSignsService(ILogger<SpringZodiacSignsService> logger)
@@ -15,9 +15,9 @@ namespace ZodiacService.Services
             _logger = logger;
         }
 
-        /*public override Task<ZodiacSign> SayZodiacSign(DateRequest request, ServerCallContext context)
+        /*public override Task<ZodiacSignSpring> SayZodiacSignSpring(DateRequestSpring request, ServerCallContext context)
         {
-            return Task.FromResult(new ZodiacSign
+            return Task.FromResult(new ZodiacSignSpring
             {
 
             });

@@ -58,17 +58,6 @@ namespace ZodiacService.Protos {
       get { return global::ZodiacService.Protos.ZodiacReflection.Descriptor.Services[0]; }
     }
 
-    /// <summary>Base class for server-side implementations of ZodiacSignTeller</summary>
-    [grpc::BindServiceMethod(typeof(ZodiacSignTeller), "BindService")]
-    public abstract partial class ZodiacSignTellerBase
-    {
-      public virtual global::System.Threading.Tasks.Task<global::ZodiacService.Protos.ZodiacSign> SayZodiacSign(global::ZodiacService.Protos.DateRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-    }
-
     /// <summary>Client for ZodiacSignTeller</summary>
     public partial class ZodiacSignTellerClient : grpc::ClientBase<ZodiacSignTellerClient>
     {
@@ -113,23 +102,6 @@ namespace ZodiacService.Protos {
       {
         return new ZodiacSignTellerClient(configuration);
       }
-    }
-
-    /// <summary>Creates service definition that can be registered with a server</summary>
-    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static grpc::ServerServiceDefinition BindService(ZodiacSignTellerBase serviceImpl)
-    {
-      return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_SayZodiacSign, serviceImpl.SayZodiacSign).Build();
-    }
-
-    /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
-    /// Note: this method is part of an experimental API that can change or be removed without any prior notice.</summary>
-    /// <param name="serviceBinder">Service methods will be bound by calling <c>AddMethod</c> on this object.</param>
-    /// <param name="serviceImpl">An object implementing the server-side handling logic.</param>
-    public static void BindService(grpc::ServiceBinderBase serviceBinder, ZodiacSignTellerBase serviceImpl)
-    {
-      serviceBinder.AddMethod(__Method_SayZodiacSign, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::ZodiacService.Protos.DateRequest, global::ZodiacService.Protos.ZodiacSign>(serviceImpl.SayZodiacSign));
     }
 
   }

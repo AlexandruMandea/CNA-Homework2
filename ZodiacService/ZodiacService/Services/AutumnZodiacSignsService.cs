@@ -7,7 +7,7 @@ using ZodiacService.Protos;
 
 namespace ZodiacService.Services
 {
-    public class AutumnZodiacSignsService : ZodiacSignTeller.ZodiacSignTellerBase
+    public class AutumnZodiacSignsService : ZodiacSignTellerAutumn.ZodiacSignTellerAutumnBase
     {
         private readonly ILogger<AutumnZodiacSignsService> _logger;
         public AutumnZodiacSignsService(ILogger<AutumnZodiacSignsService> logger)
@@ -15,9 +15,9 @@ namespace ZodiacService.Services
             _logger = logger;
         }
 
-        /*public override Task<ZodiacSign> SayZodiacSign(DateRequest request, ServerCallContext context)
+        /*public override Task<ZodiacSignAutumn> SayZodiacSignAutumn(DateRequestAutumn request, ServerCallContext context)
         {
-            return Task.FromResult(new ZodiacSign
+            return Task.FromResult(new ZodiacSignAutumn
             {
 
             });

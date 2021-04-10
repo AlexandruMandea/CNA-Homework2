@@ -68,7 +68,16 @@ namespace ZodiacClient
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string date;
+
+            Console.WriteLine("Write a date (month/day/year):");
+            date = Console.ReadLine();
+            
+            while(!IsDateValid(date))
+            {
+                Console.WriteLine("Invalid date. Write down another: ");
+                date = Console.ReadLine();
+            }
         }
     }
 }

@@ -5,12 +5,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Protos\zodiac.proto" />
+    <None Remove="Protos\zodiac_autumn.proto" />
+    <None Remove="Protos\zodiac_spring.proto" />
+    <None Remove="Protos\zodiac_summer.proto" />
+    <None Remove="Protos\zodiac_winter.proto" />
   </ItemGroup>
 
   <ItemGroup>
     <Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
-    <Protobuf Include="Protos\zodiac.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\zodiac_autumn.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\zodiac_spring.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\zodiac_summer.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\zodiac_winter.proto" GrpcServices="Server" />
   </ItemGroup>
 
   <ItemGroup>
