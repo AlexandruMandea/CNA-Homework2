@@ -19,8 +19,6 @@ namespace ZodiacService.Utilities
 
             DateTime dateRecieved = new DateTime(year, month, day);
 
-            //using (XmlReader reader = XmlReader.Create(@filePath));
-            //{
             while (reader.Read())
             {
                 if (reader.IsStartElement())
@@ -48,7 +46,6 @@ namespace ZodiacService.Utilities
                     }
                 }
             }
-            //}
             return "*null*";
         }
     }

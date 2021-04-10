@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ZodiacService.Protos;
+using ZodiacService.Utilities;
 
 namespace ZodiacService.Services
 {
@@ -20,7 +21,7 @@ namespace ZodiacService.Services
         {
             return Task.FromResult(new ZodiacSignSpring
             {
-
+                ZodiacSign = Utility.GetZodiacSign(request.Date, @"D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\Resources\time_intervals.xml")
             });
         }
     }

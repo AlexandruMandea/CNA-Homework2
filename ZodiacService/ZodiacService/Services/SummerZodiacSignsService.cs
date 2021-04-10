@@ -1,9 +1,11 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Grpc.Core;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ZodiacService.Protos;
+using ZodiacService.Utilities;
 
 namespace ZodiacService.Services
 {
@@ -15,12 +17,12 @@ namespace ZodiacService.Services
             _logger = logger;
         }
 
-        /*public override Task<ZodiacSignSummer> SayZodiacSignSummer(DateRequestSummer request, ServerCallContext context)
+        public override Task<ZodiacSignSummer> SayZodiacSign(DateRequestSummer request, ServerCallContext context)
         {
             return Task.FromResult(new ZodiacSignSummer
             {
-
+                ZodiacSign = Utility.GetZodiacSign(request.Date, @"D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\Resources\time_intervals.xml")
             });
-        }*/
+        }
     }
 }
