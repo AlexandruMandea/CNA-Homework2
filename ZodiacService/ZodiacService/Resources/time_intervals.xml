@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ZodiacSigns>
+  <Sign>
+    <Name>Ram</Name>
+    <TimeInterval>03/21-04/20</TimeInterval>
+  </Sign>
+  <Sign>
+    <Name>Bull</Name>
+    <TimeInterval>04/21-05/21</TimeInterval>
+  </Sign>
+  <Sign>
+    <Name>Twins</Name>
+    <TimeInterval>05/22-06/21</TimeInterval>
+  </Sign>
+  <Sign>
+    <Name>Crab</Name>
+    <TimeInterval>06/22-07/23</TimeInterval>
+  </Sign>
+  <Sign>
+    <Name>Lion</Name>
+    <TimeInterval>07/24-08/23</TimeInterval>
+  </Sign>
+  <Sign>
+    <Name>Maiden</Name>
+    <TimeInterval>08/24-09/23</TimeInterval>
+  </Sign>
+  <Sign>
+    <Name>Scales</Name>
+    <TimeInterval>09/24-10/23</TimeInterval>
+  </Sign>
+  <Sign>
+    <Name>Scorpion</Name>
+    <TimeInterval>10/24-11/22</TimeInterval>
+  </Sign>
+  <Sign>
+    <Name>Centaur Archer</Name>
+    <TimeInterval>11/23-12/21</TimeInterval>
+  </Sign>
+  <Sign>
+    <Name>Mountain Goat</Name>
+    <TimeInterval>12/22-01/20</TimeInterval>
+  </Sign>
+  <Sign>
+    <Name>Water-Bearer</Name>
+    <TimeInterval>01/21-02/19</TimeInterval>
+  </Sign>
+  <Sign>
+    <Name>Fish</Name>
+    <TimeInterval>02/20-03/20</TimeInterval>
+  </Sign>
+</ZodiacSigns>
