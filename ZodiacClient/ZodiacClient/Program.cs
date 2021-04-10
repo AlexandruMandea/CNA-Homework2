@@ -7,6 +7,15 @@ namespace ZodiacClient
 {
     class Program
     {
+        private enum Season
+        { 
+            Winter,
+            Spring,
+            Summer,
+            Autumn,
+            _NULL
+        };
+
         private static bool IsDateValid(String date)
         {
             string[] dateParts = date.Split("/");
@@ -68,35 +77,42 @@ namespace ZodiacClient
             }
         }
 
-        static void Main(string[] args)
+        private static Season GetSeason(string date)
         {
-            using var channel = GrpcChannel.ForAddress("https://localhost:5001");
-            var client = new ZodiacSignTellerWinter.ZodiacSignTellerWinterClient(channel);
+            string[] dateParts = date.Split("/");
 
-            var input = new DateRequestWinter();
+            int month = Int32.Parse(dateParts[0]);
 
-            Console.WriteLine("Write a date (month/day/year):");
-            input.Date = Console.ReadLine();
-
-            while (!IsDateValid(input.Date.ToString()))
+            switch (month)
             {
-                Console.WriteLine("Invalid date. Write another one: ");
-                input.Date = Console.ReadLine();
+                case 12: case 1: case 2:
+                    return Season.Winter;
+                case 3: case 4: case 5:
+                    return Season.Spring;
+                case 6: case 7: case 8:
+                    return Season.Summer;
+                case 9: case 10: case 11:
+                    return Season.Autumn;
             }
 
-            var response = client.SayZodiacSign(input);
+            return Season._NULL;
+        }
 
+        static void Main(string[] args)
+        {
+            string date = "*null*";
+            using var channel = GrpcChannel.ForAddress("https://localhost:5001");
+            string response = "*null*";
 
+            Console.WriteLine("Write a date (month/day/year):");
+            date = Console.ReadLine();
 
-            /*Console.WriteLine($"Write your name:");
-            input.Name = Console.ReadLine();
-            Console.WriteLine($"Write your id:");
-            id = Console.ReadLine();
-            input.Id = ValidateId(id);
+            while (!IsDateValid(date))
+            {
+                Console.WriteLine("Invalid date. Write another one: ");
+                date = Console.ReadLine();
+            }
 
-            var proccess = await client.ShowInformationAsync(input);
-            var response = await client.RecieveDataAsync(input);
-*/
             Console.WriteLine(response);
 
             Console.ReadLine();
