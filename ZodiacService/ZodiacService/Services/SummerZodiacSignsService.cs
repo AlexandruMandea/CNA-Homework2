@@ -21,7 +21,7 @@ namespace ZodiacService.Services
         {
             return Task.FromResult(new ZodiacSignSummer
             {
-                ZodiacSign = Utility.GetZodiacSign(request.Date, @"D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\Resources\time_intervals.xml")
+                ZodiacSign = Utility.GetZodiacSign(request.Date, @"D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\Resources\time_intervals_summer.xml")
             });
         }
     }

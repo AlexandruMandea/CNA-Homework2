@@ -28,16 +28,25 @@ namespace ZodiacService.Utilities
                         case "Sign":
                             string dateRead = reader.GetAttribute(1);
                             string[] dateReadParts = dateRead.Split(new char[] { '/', '-' });
-                            DateTime intervalStart = new DateTime(year, Int32.Parse(dateReadParts[0]), Int32.Parse(dateReadParts[1]));
+                            DateTime intervalStart = new DateTime();
                             DateTime intervalEnd = new DateTime();
-                            if (Int32.Parse(dateReadParts[0]) == 12)
+
+                            if(Int32.Parse(dateReadParts[0]) == 12 && dateRecieved.Month==12)
                             {
-                                intervalEnd = new DateTime(year + 1, Int32.Parse(dateReadParts[2]), Int32.Parse(dateReadParts[3]));
+                                intervalStart = new DateTime(year, Int32.Parse(dateReadParts[0]), Int32.Parse(dateReadParts[1]));
+                                intervalEnd = new DateTime(year+1, Int32.Parse(dateReadParts[2]), Int32.Parse(dateReadParts[3]));
+                            }
+                            else if (Int32.Parse(dateReadParts[0]) == 12 && dateRecieved.Month == 1)
+                            {
+                                intervalStart = new DateTime(year - 1, Int32.Parse(dateReadParts[0]), Int32.Parse(dateReadParts[1]));
+                                intervalEnd = new DateTime(year, Int32.Parse(dateReadParts[2]), Int32.Parse(dateReadParts[3]));
                             }
                             else
                             {
+                                intervalStart = new DateTime(year, Int32.Parse(dateReadParts[0]), Int32.Parse(dateReadParts[1]));
                                 intervalEnd = new DateTime(year, Int32.Parse(dateReadParts[2]), Int32.Parse(dateReadParts[3]));
                             }
+
                             if (dateRecieved >= intervalStart && dateRecieved <= intervalEnd)
                             {
                                 return reader.GetAttribute(0);

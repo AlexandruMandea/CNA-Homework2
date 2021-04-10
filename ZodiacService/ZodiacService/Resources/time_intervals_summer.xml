@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ZodiacSigns>
+  <Sign Name="Twins" TimeInterval="05/22-06/21">
+  </Sign>
+  <Sign Name="Crab" TimeInterval="06/22-07/23">
+  </Sign>
+  <Sign Name="Lion" TimeInterval="07/24-08/23">
+  </Sign>
+  <Sign Name="Maiden" TimeInterval="08/24-09/23">
+  </Sign>
+</ZodiacSigns>
