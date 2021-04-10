@@ -1,7 +1,3 @@
-D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\obj\Debug\netcoreapp3.1\ZodiacService.AssemblyInfoInputs.cache
-D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\obj\Debug\netcoreapp3.1\ZodiacService.AssemblyInfo.cs
-D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\obj\Debug\netcoreapp3.1\ZodiacService.csproj.CoreCompileInputs.cache
-D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\obj\Debug\netcoreapp3.1\ZodiacService.MvcApplicationPartsAssemblyInfo.cache
 D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\bin\Debug\netcoreapp3.1\ZodiacService.exe
@@ -17,6 +13,10 @@ D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\bin\Debug\netcoreapp3.1\G
 D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\bin\Debug\netcoreapp3.1\Grpc.Net.Client.dll
 D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\bin\Debug\netcoreapp3.1\Grpc.Net.ClientFactory.dll
 D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\bin\Debug\netcoreapp3.1\Grpc.Net.Common.dll
+D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\obj\Debug\netcoreapp3.1\ZodiacService.AssemblyInfoInputs.cache
+D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\obj\Debug\netcoreapp3.1\ZodiacService.AssemblyInfo.cs
+D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\obj\Debug\netcoreapp3.1\ZodiacService.csproj.CoreCompileInputs.cache
+D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\obj\Debug\netcoreapp3.1\ZodiacService.MvcApplicationPartsAssemblyInfo.cache
 D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\obj\Debug\netcoreapp3.1\staticwebassets\ZodiacService.StaticWebAssets.Manifest.cache
 D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\obj\Debug\netcoreapp3.1\staticwebassets\ZodiacService.StaticWebAssets.xml
 D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\obj\Debug\netcoreapp3.1\scopedcss\bundle\ZodiacService.styles.css

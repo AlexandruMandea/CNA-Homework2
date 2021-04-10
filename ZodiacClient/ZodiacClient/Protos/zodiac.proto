@@ -14,4 +14,4 @@ message DateRequest {
 
 message ZodiacSign {
 	string zodiac_sign = 1;
-} 
+}
