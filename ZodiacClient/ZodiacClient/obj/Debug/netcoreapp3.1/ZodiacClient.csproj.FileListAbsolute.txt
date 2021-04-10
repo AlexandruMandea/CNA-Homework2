@@ -9,7 +9,6 @@ D:\Proiecte\cloud\cna_hmk2\ZodiacClient\ZodiacClient\bin\Debug\netcoreapp3.1\Grp
 D:\Proiecte\cloud\cna_hmk2\ZodiacClient\ZodiacClient\bin\Debug\netcoreapp3.1\Grpc.Net.Client.dll
 D:\Proiecte\cloud\cna_hmk2\ZodiacClient\ZodiacClient\bin\Debug\netcoreapp3.1\Grpc.Net.Common.dll
 D:\Proiecte\cloud\cna_hmk2\ZodiacClient\ZodiacClient\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
-D:\Proiecte\cloud\cna_hmk2\ZodiacClient\ZodiacClient\obj\Debug\netcoreapp3.1\ZodiacClient.csprojAssemblyReference.cache
 D:\Proiecte\cloud\cna_hmk2\ZodiacClient\ZodiacClient\obj\Debug\netcoreapp3.1\ZodiacClient.AssemblyInfoInputs.cache
 D:\Proiecte\cloud\cna_hmk2\ZodiacClient\ZodiacClient\obj\Debug\netcoreapp3.1\ZodiacClient.AssemblyInfo.cs
 D:\Proiecte\cloud\cna_hmk2\ZodiacClient\ZodiacClient\obj\Debug\netcoreapp3.1\ZodiacClient.csproj.CoreCompileInputs.cache

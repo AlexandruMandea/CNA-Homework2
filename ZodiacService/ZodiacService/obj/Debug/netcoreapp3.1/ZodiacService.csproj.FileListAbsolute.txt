@@ -25,3 +25,4 @@ D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\obj\Debug\netcoreapp3.1\Z
 D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\obj\Debug\netcoreapp3.1\ZodiacService.dll
 D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\obj\Debug\netcoreapp3.1\ZodiacService.pdb
 D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\obj\Debug\netcoreapp3.1\ZodiacService.genruntimeconfig.cache
+D:\Proiecte\cloud\cna_hmk2\ZodiacService\ZodiacService\obj\Debug\netcoreapp3.1\ZodiacService.csprojAssemblyReference.cache

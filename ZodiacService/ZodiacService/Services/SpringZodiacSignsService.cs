@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Grpc.Core;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,12 +16,12 @@ namespace ZodiacService.Services
             _logger = logger;
         }
 
-        /*public override Task<ZodiacSignSpring> SayZodiacSignSpring(DateRequestSpring request, ServerCallContext context)
+        public override Task<ZodiacSignSpring> SayZodiacSign(DateRequestSpring request, ServerCallContext context)
         {
             return Task.FromResult(new ZodiacSignSpring
             {
 
             });
-        }*/
+        }
     }
 }

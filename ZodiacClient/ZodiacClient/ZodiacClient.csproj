@@ -6,7 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Protos\zodiac.proto" />
+    <None Remove="Protos\zodiac_autumn.proto" />
+    <None Remove="Protos\zodiac_spring.proto" />
+    <None Remove="Protos\zodiac_summer.proto" />
+    <None Remove="Protos\zodiac_winter.proto" />
   </ItemGroup>
 
   <ItemGroup>
@@ -19,7 +22,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="Protos\zodiac.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\zodiac_autumn.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\zodiac_spring.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\zodiac_summer.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\zodiac_winter.proto" GrpcServices="Client" />
   </ItemGroup>
 
 </Project>

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Grpc.Net.Client;
+using System;
 using System.Text.RegularExpressions;
+using ZodiacService.Protos;
 
 namespace ZodiacClient
 {
@@ -68,16 +70,36 @@ namespace ZodiacClient
 
         static void Main(string[] args)
         {
-            string date;
+            using var channel = GrpcChannel.ForAddress("https://localhost:5001");
+            var client = new ZodiacSignTellerWinter.ZodiacSignTellerWinterClient(channel);
+
+            var input = new DateRequestWinter();
 
             Console.WriteLine("Write a date (month/day/year):");
-            date = Console.ReadLine();
-            
-            while(!IsDateValid(date))
+            input.Date = Console.ReadLine();
+
+            while (!IsDateValid(input.Date.ToString()))
             {
-                Console.WriteLine("Invalid date. Write down another: ");
-                date = Console.ReadLine();
+                Console.WriteLine("Invalid date. Write another one: ");
+                input.Date = Console.ReadLine();
             }
+
+            var response = client.SayZodiacSign(input);
+
+
+
+            /*Console.WriteLine($"Write your name:");
+            input.Name = Console.ReadLine();
+            Console.WriteLine($"Write your id:");
+            id = Console.ReadLine();
+            input.Id = ValidateId(id);
+
+            var proccess = await client.ShowInformationAsync(input);
+            var response = await client.RecieveDataAsync(input);
+*/
+            Console.WriteLine(response);
+
+            Console.ReadLine();
         }
     }
 }
