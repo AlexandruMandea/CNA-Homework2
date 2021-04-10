@@ -113,6 +113,41 @@ namespace ZodiacClient
                 date = Console.ReadLine();
             }
 
+            switch (GetSeason(date))
+            {
+                case Season.Winter:
+                    var client1 = new ZodiacSignTellerWinter.ZodiacSignTellerWinterClient(channel);
+                    var input1 = new DateRequestWinter();
+
+                    input1.Date = date;
+                    response = client1.SayZodiacSign(input1).ToString();
+                    break;
+
+                case Season.Spring:
+                    var client2 = new ZodiacSignTellerSpring.ZodiacSignTellerSpringClient(channel);
+                    var input2 = new DateRequestSpring();
+
+                    input2.Date = date;
+                    response = client2.SayZodiacSign(input2).ToString();
+                    break;
+
+                case Season.Summer:
+                    var client3 = new ZodiacSignTellerSummer.ZodiacSignTellerSummerClient(channel);
+                    var input3 = new DateRequestSummer();
+
+                    input3.Date = date;
+                    response = client3.SayZodiacSign(input3).ToString();
+                    break;
+
+                case Season.Autumn:
+                    var client4 = new ZodiacSignTellerAutumn.ZodiacSignTellerAutumnClient(channel);
+                    var input4 = new DateRequestAutumn();
+
+                    input4.Date = date;
+                    response = client4.SayZodiacSign(input4).ToString();
+                    break;
+            }
+
             Console.WriteLine(response);
 
             Console.ReadLine();
