@@ -23,35 +23,33 @@ namespace ZodiacService.Utilities
             {
                 if (reader.IsStartElement())
                 {
-                    switch (reader.Name.ToString())
+                    if (reader.Name.ToString() == "Sign")
                     {
-                        case "Sign":
-                            string dateRead = reader.GetAttribute(1);
-                            string[] dateReadParts = dateRead.Split(new char[] { '/', '-' });
-                            DateTime intervalStart = new DateTime();
-                            DateTime intervalEnd = new DateTime();
+                        string dateRead = reader.GetAttribute(1);
+                        string[] dateReadParts = dateRead.Split(new char[] { '/', '-' });
+                        DateTime intervalStart = new DateTime();
+                        DateTime intervalEnd = new DateTime();
 
-                            if(Int32.Parse(dateReadParts[0]) == 12 && dateRecieved.Month==12)
-                            {
-                                intervalStart = new DateTime(year, Int32.Parse(dateReadParts[0]), Int32.Parse(dateReadParts[1]));
-                                intervalEnd = new DateTime(year+1, Int32.Parse(dateReadParts[2]), Int32.Parse(dateReadParts[3]));
-                            }
-                            else if (Int32.Parse(dateReadParts[0]) == 12 && dateRecieved.Month == 1)
-                            {
-                                intervalStart = new DateTime(year - 1, Int32.Parse(dateReadParts[0]), Int32.Parse(dateReadParts[1]));
-                                intervalEnd = new DateTime(year, Int32.Parse(dateReadParts[2]), Int32.Parse(dateReadParts[3]));
-                            }
-                            else
-                            {
-                                intervalStart = new DateTime(year, Int32.Parse(dateReadParts[0]), Int32.Parse(dateReadParts[1]));
-                                intervalEnd = new DateTime(year, Int32.Parse(dateReadParts[2]), Int32.Parse(dateReadParts[3]));
-                            }
+                        if (Int32.Parse(dateReadParts[0]) == 12 && dateRecieved.Month == 12)
+                        {
+                            intervalStart = new DateTime(year, Int32.Parse(dateReadParts[0]), Int32.Parse(dateReadParts[1]));
+                            intervalEnd = new DateTime(year + 1, Int32.Parse(dateReadParts[2]), Int32.Parse(dateReadParts[3]));
+                        }
+                        else if (Int32.Parse(dateReadParts[0]) == 12 && dateRecieved.Month == 1)
+                        {
+                            intervalStart = new DateTime(year - 1, Int32.Parse(dateReadParts[0]), Int32.Parse(dateReadParts[1]));
+                            intervalEnd = new DateTime(year, Int32.Parse(dateReadParts[2]), Int32.Parse(dateReadParts[3]));
+                        }
+                        else
+                        {
+                            intervalStart = new DateTime(year, Int32.Parse(dateReadParts[0]), Int32.Parse(dateReadParts[1]));
+                            intervalEnd = new DateTime(year, Int32.Parse(dateReadParts[2]), Int32.Parse(dateReadParts[3]));
+                        }
 
-                            if (dateRecieved >= intervalStart && dateRecieved <= intervalEnd)
-                            {
-                                return reader.GetAttribute(0);
-                            }
-                            break;
+                        if (dateRecieved >= intervalStart && dateRecieved <= intervalEnd)
+                        {
+                            return reader.GetAttribute(0);
+                        }
                     }
                 }
             }
